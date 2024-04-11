@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:h="http://java.sun.com/jsf/html"
+			xmlns:f="http://java.sun.com/jsf/core"
+			xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+	<h:head>
+		<title>Super Mario</title>
+		<style>
+				.mario_style 
+				{
+						background:#aaddff; text-align:center;
+				}
+				
+				.luigi_style 
+				{		background:#aaff99; text-align:center;
+				}
+				
+				.princess_style 
+				{
+						background:#ffff99; text-align:center;
+				}
+			
+				.bowser_style 
+				{
+						background:#ffbb99; text-align:center;
+				}
+		</style>
+	</h:head>
+
+	<h:body style="padding:10px 200px;">
+				
+		<ui:include src="header.xhtml" />
+		
+		<h2>Галерия</h2>
+		
+		<!-- Тяло на страницата -->
+		<h:panelGrid cellpadding="10" columns="4" 
+									border="1" 
+					columnClasses="mario_style, luigi_style, 
+													princess_style, bowser_style">
+			<h:outputLink value="resources/images/mario.png">
+								<h:graphicImage style="height:150px;"
+							value="resources/images/mario.png" />
+			</h:outputLink>
+			
+			<h:outputLink value="resources/images/luigi.png">
+			<h:graphicImage	style="height:150px;"
+							value="resources/images/luigi.png" />
+			</h:outputLink>
+							
+			<h:outputLink value="resources/images/princess_peach.png">
+			<h:graphicImage	style="height:150px;"
+			 value="resources/images/princess_peach.png" />
+			 </h:outputLink>
+			 
+			 <h:outputLink value="resources/images/bowser.png">
+			<h:graphicImage style="height:150px;"	
+							value="resources/images/bowser.png" />
+							</h:outputLink>
+			
+			<h:panelGroup>Марио</h:panelGroup>
+			<h:panelGroup>Луиджи</h:panelGroup>
+			<h:panelGroup>Хубавата принцеса</h:panelGroup>
+			<h:panelGroup>Болсър</h:panelGroup>
+			
+		</h:panelGrid>		 
+		
+		<h:panelGrid cellpadding="5" columns="2" border="1" columnClasses="mario, mario2,mushroom">
+		<h:graphicImage style="height:150px;"
+						value="/resources/images/png-clipart-mario-mario.png" />
+						<h:panelGroup>Марио</h:panelGroup>
+		<h:graphicImage style="height:150px;"
+						value ="/resources/images/mario_3.png" />
+						<h:panelGroup>Марио2</h:panelGroup>
+		<h:graphicImage style="height:150px;"
+						value ="/resources/images/mushroom.png" />
+							
+							
+							
+							
+							
+							<h:panelGroup>Гъба</h:panelGroup>
+		</h:panelGrid>
+		<!-- Тяло на страницата -->
+		
+	</h:body>
+</html>
