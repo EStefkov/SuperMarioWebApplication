@@ -51,12 +51,15 @@ public class Contacts
 				{
 						// Създаване на ново съобщение
 						Message msg = 
-							new Message(senderName, email, message);
-			
+									new Message(senderName, email, message);
+					
 						// Добавяне на съобщението към базата данни
 						Database.addMessage(msg);
-				
-						return "sent";
+					
+						// Добавяме променливата faces-redirect,
+						// която указва на JSF да смени URL адреса
+						// след пренасочване със sent
+						return "sent?faces-redirect=true";
 				}
 				else
 				{
@@ -64,5 +67,6 @@ public class Contacts
 						// се връща към същата страница
 						return "contacts";
 				}
-		}
+			} 
+
 }
